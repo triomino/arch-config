@@ -1,5 +1,5 @@
 #!/bin/bash
-array=('quiet_song.jpg' 'moon_ocean.jpg' 'yuan.png')
+array=('quiet_song.jpg' 'moon_ocean.jpg')
 length=${#array[*]}
 
 file=~/.config/i3/current.txt
