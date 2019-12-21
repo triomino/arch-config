@@ -163,6 +163,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+bindsym $mod+m exec ~/sh/monitor.sh connect
+bindsym $mod+n exec ~/sh/monitor.sh off
+
 # make floating window stay in screen
 floating_minimum_size 75 x 50
 floating_maximum_size 800 x 800
@@ -178,5 +181,5 @@ hide_edge_borders both
 
 for_window [class="URxvt"] border none
 
-exec feh --bg-fill ~/.config/i3/quiet_song.jpg &
+exec feh --bg-fill ~/.config/i3/nintendo/0.jpg &
 exec xcompmgr &
