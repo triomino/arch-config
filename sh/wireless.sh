@@ -1,0 +1,1 @@
+sudo iw dev wlp3s0 scan | egrep "signal:|SSID:|(BSS [a-z0-9][a-z0-9]:[a-z0-9])" | sed -e "s/\tSSID: //" -e "s/\tsignal: //" -e "s/BSS //" -e "s/(on wlp3s0)//" | awk 'NR % 3 == 2 {print} NR % 3 == 1 {delay = $0} NR % 3 == 0 {print; print delay; delay=""}' | awk '{ORS = (NR % 3 == 0) ? " \n" : " "; print}' | sort
