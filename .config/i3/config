@@ -165,6 +165,10 @@ bindsym $mod+r mode "resize"
 
 bindsym $mod+m exec ~/sh/monitor.sh connect
 bindsym $mod+n exec ~/sh/monitor.sh off
+bindsym $mod+Shift+m exec xbacklight -inc 10
+bindsym $mod+Shift+n exec xbacklight -dec 10
+bindsym $mod+Shift+comma exec xbacklight -inc 1
+bindsym $mod+Shift+period exec xbacklight -dec 1
 
 # make floating window stay in screen
 floating_minimum_size 75 x 50
@@ -181,5 +185,5 @@ hide_edge_borders both
 
 for_window [class="URxvt"] border none
 
-exec feh --bg-fill ~/.config/i3/nintendo/0.jpg &
+exec feh --bg-fill ~/.config/i3/nintendo/1.jpg &
 exec xcompmgr &
